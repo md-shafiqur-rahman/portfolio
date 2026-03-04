@@ -2528,3 +2528,392 @@ select,
         padding-bottom: 72px;
     }
 }
+
+/* ========================================
+   📱 COMPREHENSIVE MOBILE RESPONSIVE STYLES
+   ======================================== */
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    body {
+        cursor: auto !important;
+    }
+
+    a,
+    button,
+    [onclick],
+    label,
+    input,
+    textarea,
+    select,
+    .video-thumbnail {
+        cursor: auto !important;
+    }
+
+    .cursor-dot,
+    .cursor-ring,
+    #cursor-glow {
+        display: none !important;
+    }
+}
+
+/* ===== TABLET: 768px ===== */
+@media (max-width: 768px) {
+
+    /* --- Container --- */
+    .container {
+        padding: 0 16px;
+    }
+
+    /* --- Navigation --- */
+    nav#main-nav {
+        padding: 12px 16px;
+    }
+
+    nav#main-nav.nav-scrolled {
+        padding: 10px 16px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(10, 10, 15, 0.97);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        z-index: 99;
+        padding: 40px 20px 80px;
+    }
+
+    .nav-links.mobile-open {
+        display: flex;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        padding: 12px 24px;
+        width: 100%;
+        text-align: center;
+        border-radius: 12px;
+        border-bottom: none !important;
+    }
+
+    .nav-link.cta-link {
+        margin-top: 8px;
+        padding: 14px 32px;
+        border-radius: 12px;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        z-index: 100;
+        position: relative;
+    }
+
+    .mobile-menu-btn.is-open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .mobile-menu-btn.is-open span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    .mobile-menu-btn.is-open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* --- Logo --- */
+    .logo-img {
+        height: 180px;
+    }
+
+    /* --- Hero Section --- */
+    #hero {
+        padding: 100px 0 60px;
+        margin-bottom: 60px;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-content .subtitle {
+        text-align: center;
+        margin: 0 auto 28px;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: -1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-frame {
+        max-width: 260px;
+    }
+
+    .floating-stats {
+        display: none;
+    }
+
+    /* --- Hero Title Wrapper --- */
+    .hero-title-wrapper {
+        min-height: 160px;
+        height: calc(clamp(32px, 8vw, 52px) * 1.05 * 3);
+    }
+
+    .title-slide {
+        font-size: clamp(32px, 8vw, 52px);
+        text-align: center;
+        z-index: 0;
+    }
+
+    .title-slide.active {
+        z-index: 1;
+    }
+
+    /* --- Section titles --- */
+    .section-title {
+        font-size: clamp(22px, 5vw, 30px);
+    }
+
+    /* --- About Grid --- */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    /* --- Services / Strategy Grid --- */
+    .strategy-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .services-bento {
+        grid-template-columns: 1fr !important;
+    }
+
+    .services-bento .strategy-card.bento-featured {
+        grid-column: span 1 !important;
+    }
+
+    /* --- Tools / Premium Section --- */
+    .premium-section {
+        padding: 28px 20px;
+    }
+
+    .premium-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    /* --- Skills Timing Table --- */
+    .timing-table {
+        overflow-x: auto;
+    }
+
+    .timing-row {
+        grid-template-columns: 140px 100px 1fr;
+        padding: 12px 16px;
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .timing-row.header {
+        padding: 10px 16px;
+    }
+
+    /* --- Authority / Process Grid --- */
+    .authority-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 60px;
+    }
+
+    /* --- Experience / Week Grid --- */
+    .week-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 60px;
+    }
+
+    /* --- Hooks / Why Me Grid --- */
+    .hooks-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 60px;
+    }
+
+    /* --- Testimonials --- */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* --- Contact Info Grid --- */
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* --- Metrics Grid --- */
+    .strategy-grid[style*="margin-bottom: 80px"] {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* --- Scroll to Top button position --- */
+    .scroll-to-top {
+        bottom: 90px;
+        right: 16px;
+    }
+
+    /* --- General section margin reduction --- */
+    .strategy-grid,
+    .week-grid,
+    .hooks-grid,
+    .about-grid {
+        margin-bottom: 60px;
+    }
+
+    /* --- Buttons --- */
+    .btn-primary,
+    .btn-secondary,
+    .btn-book-call {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- Bottom Nav label size --- */
+    .mbn-link {
+        font-size: 8px;
+        padding: 4px 6px;
+        min-width: 44px;
+    }
+
+    /* --- Trust badges --- */
+    .trust-badges {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+/* ===== SMALL MOBILE: 480px ===== */
+@media (max-width: 480px) {
+
+    /* --- Container tighter padding --- */
+    .container {
+        padding: 0 12px;
+    }
+
+    /* --- Hero --- */
+    #hero {
+        padding: 90px 0 48px;
+    }
+
+    .hero-title-wrapper {
+        min-height: 130px;
+        height: auto;
+    }
+
+    .title-slide {
+        font-size: clamp(28px, 9vw, 42px);
+    }
+
+    /* --- About highlights: single column on very small screens --- */
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Premium grid: single column --- */
+    .premium-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Timing row: simpler on tiny screen --- */
+    .timing-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 12px 12px;
+    }
+
+    .timing-row.header {
+        display: none;
+    }
+
+    .timing-time {
+        font-size: 12px;
+    }
+
+    .timing-why {
+        font-size: 11px;
+    }
+
+    /* --- Metrics grid: single column --- */
+    .strategy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Nav padding --- */
+    nav#main-nav,
+    nav#main-nav.nav-scrolled {
+        padding: 10px 12px;
+    }
+
+    /* --- Logo smaller --- */
+    .logo-img {
+        height: 140px;
+    }
+
+    /* --- Buttons --- */
+    .btn-primary {
+        font-size: 13px;
+        padding: 13px 20px;
+    }
+
+    .btn-book-call {
+        font-size: 13px;
+        padding: 14px 20px;
+    }
+
+    /* --- Bottom nav --- */
+    .mbn-link {
+        font-size: 7px;
+        padding: 4px 4px;
+        min-width: 38px;
+        gap: 2px;
+    }
+
+    .mbn-link svg {
+        width: 18px;
+        height: 18px;
+    }
+}
